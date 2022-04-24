@@ -1,0 +1,33 @@
+.mainDivRow{
+    height:100vh;
+    overflow: hidden;
+    overflow-y:hidden;
+}
+.shopeBodyMain{
+    height:100vh;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.mainNameFilterBox{
+   /* border-bottom:2px solid grey; */
+}
+.ratingFilterSection{
+    display: flex;
+    flex-direction: column;
+}
+.priceFilerMostOuterRow{
+    /* border-bottom:2px solid grey; */
+}
+.pricefilters{
+    display: flex;
+    flex-direction: row;
+}
+.priceStartBtn{
+    background-color: transparent;
+    border:none;
+    outline:none;
+}
+.priceStartBtnInput{
+    outline: none;
+    border:none;
+}

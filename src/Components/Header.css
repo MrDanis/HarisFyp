@@ -1,0 +1,149 @@
+.newHed{
+  padding:0px;
+  margin:0px;
+ /* border: 1px solid grey; */
+}
+.HeadMainRow{
+  /* border:1px solid green; */
+  padding:5px;
+  padding-bottom:15px;
+  margin:0px 0px 5px 0px;
+  /* position:fixed; */
+  /* background-color: rgb(228, 228, 228); */
+}
+.logoSearch{
+  padding:0px;
+  margin:0px;
+  /* border:2px solid blue; */
+  /* padding-left:10px; */
+}
+.mainLogo{
+  /* border:2px solid black; */
+  padding:0px;
+  margin:0px;
+  text-align: start;
+  /* padding-left:10px; */
+}
+.mainLogo p{
+  padding:10px;
+  padding-top:0px;
+  padding-right:0px;
+  font-size: 32px;
+  font-weight:700;
+}
+.mySearchbar{
+  padding-top:10px;
+  /* border:2px solid orangered; */
+}
+.searchBorder{
+  border:2px solid orangered;
+  /* border--color: transparent; */
+  width:50%;
+  padding:0px;
+
+  border-radius:25px;
+  position:relative;
+}
+.searchBorder input
+{
+   width:85%;
+   outline:none;
+   border-radius:25px;
+   padding-left:10px;
+   border:none;
+   background-color:transparent;
+}
+.searchBorder i{
+  width:15%;
+  font-weight: 400;
+  /* border:2px solid orangered; */
+  background-color: orangered;
+  color:white;
+  margin:0px;
+  text-align: center;
+  padding-top:5px;
+  padding-bottom:5px;
+  position:absolute;
+  right:-1px;
+  /* padding:5px 5px 5px 5px; */
+  border-radius: 25px;
+  /* float:right; */
+}
+.logoContainer{
+  padding:0px;
+  margin:0px;
+  /* border:2px solid goldenrod; */
+}
+.navItr{
+  /* border:2px solid blue; */
+  padding: 5px;
+  margin:0px;
+  text-align: end;
+}
+/* new Changes added here */
+.navItr .navItr1{
+  padding:0px;
+  margin:0px;
+  list-style-type: none;
+}
+/* new changes end here */
+.navItr .navItr1 li{
+  display: inline-flex;
+  padding:0px 0px 0px 5px;
+  margin:0px;
+  /* vertical-align: middle; */
+}
+.navItr .navItr1 li a{
+  /* border-bottom:1px solid black; */
+  padding:5px 10px;
+  font-size: 16px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  transition:.5s all ease-in-out;
+  cursor:pointer;
+  border-radius:10px;
+}
+.navItr .navItr1 li a:hover{
+  background: #f12711;
+  transition-delay: .5;
+  transition-duration: 1s;
+  background: linear-gradient(to top, #f12711);
+}
+.navItr .navItr1 li a:hover span{
+  color: white;
+}
+.logoutUserlink:hover{
+  text-decoration: none;
+  cursor: pointer;
+  color:black;
+  background: #f12711;
+  transition-delay: .5;
+  transition-duration: 1s;
+  background: linear-gradient(to top, #f12711);
+  border-radius:10px;
+}
+.customHeaderLinks{
+  text-decoration: none;
+  color:black;
+}
+/* Media qurey for search bar on desktop screen  */
+@media (max-width:930px) and (min-width:500px) {
+  .searchBorder{
+    width:100%;
+ }
+}
+@media (max-width:940px) and (min-width:576px) {
+  .navItr .navItr1 li a{
+    padding:2.5px;
+    font-size: 12px;
+  }
+  .navItr{
+    padding-left:0px;
+  }
+}
+@media (max-width:575px){
+  .navItr{
+    display:none;
+  }
+}

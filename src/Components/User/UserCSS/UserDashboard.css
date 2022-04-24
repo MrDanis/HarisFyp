@@ -1,0 +1,22 @@
+.userDashboardTopBoxes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:10px 0px 0px 0px;
+    border-radius: 10px;
+    border-top:3px solid green;
+    border-width: 5px;
+}
+.userDashboardTopBoxesTitle{
+    font-weight:500;
+}
+.userDashboardTopBoxesOrderNo{
+    font-weight: 400;
+}
+.userDashboardTopBoxesAmountRow{
+    border-top:3px solid gainsboro;
+}
+.userDashboardTopBoxesAmountText{
+    border-right:3px solid gainsboro;
+}

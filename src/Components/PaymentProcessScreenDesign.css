@@ -1,0 +1,42 @@
+.paymentProcessTitle{
+    color: aquamarine;
+}
+.coloredNavigationBox{
+    background: linear-gradient(to right, #ffe259, #ffa751);
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    /* clip-path: polygon(0% 0%, 59% 0, 100% 50%, 60% 100%, 0% 100%); */
+    color:white
+}
+.SimplecoloredNavigationBox{
+    background: linear-gradient(to right, #ffe259, #ffa751);
+    color:white
+}
+.navigationBox{
+    display: flex;
+    justify-content:center;
+}
+.PersonalInformationHeading,.ShippingInfoHeading,.PaymentMethodHeading,.OrderConfirmationHeading{
+    font-size: 12px;
+    font-weight: 700;
+    font-style: normal;  
+}
+/* Form Box Styling Start*/
+.FormsMainBox{
+    
+}
+
+/* Form Box Styling End */
+
+
+
+
+
+/* Mobile View media Quries Start */
+@media (max-width:578px) and (min-width:320px)
+{
+    .paymentProcessMainContainer{
+     width:100%!important;
+    
+    }
+}
+/* Mobile View media Quries End */

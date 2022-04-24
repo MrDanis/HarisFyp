@@ -1,0 +1,35 @@
+.footerContainer,.footerRow,.footerColumn{
+    padding:0px;
+    margin:0px;
+  }
+.footerContainer{
+    background-color: rgb(85, 170, 85);
+    color: white;
+} 
+.footerColumn{
+    display: flex;
+    flex-direction: column;
+}
+.footerFirstDiv{
+    padding-right:25px;
+    padding-left: 10px;
+}
+.footerLinkSocialIcons1,.footerLinkSocialIcons2,.footerLinkSocialIcons3,.footerLinkSocialIcons4{
+    font-size: 22px;
+}
+.footerLinkSocialIcons1:hover{
+    cursor:pointer;
+    color: red;
+}
+.footerLinkSocialIcons2:hover{
+    cursor:pointer;
+    color: blue;
+}
+.footerLinkSocialIcons3:hover{
+    cursor:pointer;
+    color: rgb(57, 57, 255);
+}
+.footerLinkSocialIcons4:hover{
+    cursor:pointer;
+    color: yellow;
+}

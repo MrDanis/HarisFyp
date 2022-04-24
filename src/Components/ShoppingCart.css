@@ -1,0 +1,5 @@
+.CartDataColumn{
+    height:80vh;
+    overflow: hidden;
+    overflow-y:auto;
+}

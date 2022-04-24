@@ -1,0 +1,236 @@
+.loginContainer{
+    padding:0px;
+    margin:0px;
+    background-color: rgba(247,247,247,255);
+    border:0px solid red; 
+}
+.loginMainRow{
+    padding:0px;
+    margin:0px;
+    border:0px solid blue;
+}
+.loginImg{
+    padding:0px;
+    margin:0px;
+    border:0px solid green;
+}
+.loginImg img{
+    width:100%;
+    height:100vh;
+}
+.loginForm{
+    padding:0px;
+    margin:0px;
+    border:0px solid black;
+
+    position:relative;
+}
+.loginformContainer{
+    padding:10px 0px 10px 0px;
+    margin:0px;
+    border-bottom:2px solid rgb(42, 136, 42);
+    position:absolute;
+    top:25%;
+    left:25%;
+    width:50%;
+    border-bottom-left-radius:15px;
+    border-bottom-right-radius:15px;
+}
+.loginformRow{
+    padding:0px;
+    margin:0px;
+    border:0px solid blue;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+}
+.loginformTittle{
+    padding:5px 15px 5px 15px;
+    margin:0px;
+    background-color:whitesmoke;
+    border-bottom:2px solid rgb(233, 233, 233);
+}
+.loginformTittle h1{
+    font-family: sans-serif;
+    font-weight:500;
+    font-size: 22px;
+    font-style: normal;
+    padding:0px 0px 2px 0px;
+    margin:0px;
+    
+}
+.loginformBody{
+    padding:0px 15px 0px 15px;
+    margin:0px;
+    border:0px solid red;
+    display: flex;
+    flex-direction: column;
+}
+.loginformBody label{
+    padding:10px 0px 0px 5px;
+    font-weight: 600;
+}
+.loginformBody input{
+    outline:2px solid #949794;
+    border-radius:25px;
+    padding:10px;
+    background-color: transparent;
+    color:black;
+    font-size:14px;
+    border:none;
+    margin-top:.3rem;
+}
+.loginformBody small{
+    text-align: end;
+    padding:5px 5px 5px 0px;
+    color:grey;
+    font-weight: 500;
+}
+.loginformButton{
+    
+    padding:10px 0px 0px 0px;
+    margin:0px;
+    border:0px solid green;
+    display: flex;
+    flex-direction: column;
+    position:relative;
+}
+.loginformButton button{
+    width:50%;
+    margin-left: 25%;
+    outline:none;
+    border:none;
+    color:white;
+    padding:7px; 
+    border-radius:25px;
+    font-weight:600;
+    background: linear-gradient(to right, #00c9ff, #92fe9d);
+    margin-top:.5rem;
+    margin-bottom:.5rem;
+}
+
+@media (max-width:756px) {
+    .loginformTittle h1{
+       color: green; 
+    }
+    .loginformContainer{
+        left:10%;
+        width:80%;
+    }
+}
+
+
+
+
+
+
+
+
+/* .loginContainer,.logRow,.imgArea,.formArea{
+    padding: 0px;
+    margin:0px;
+    height:100vh;
+    background-color: rgba(247,247,247,255)
+}
+.imgArea{
+    border:0px solid red;
+}
+.imgArea img{
+    height:100%;
+    width:100%;
+}
+.formArea{
+    border:0px solid red;
+    position:relative;
+}
+.loginForm{
+    border:0px solid gainsboro;
+    position:absolute;
+    top:25%;
+    left:25%;
+    height:50%;
+    width:50%;
+    padding:0px;
+    border-radius:15px;
+    background-color: whitesmoke;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px; 
+}
+.fomrData{
+    border:0px solid red;
+    width:100%;
+    height:100%;
+    padding:0px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px; 
+}
+.formDataRow{
+    padding:0px;
+    border:0px solid green;
+    width:100%;
+    height:100%;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px; 
+}
+.formTittle{
+    padding:15px;
+    margin:0px;
+    text-align: start;
+    border:0px solid black;
+    border-bottom:2px solid gainsboro;
+    height:15%;
+    color:black;
+    font-weight: bold;
+    font-style: normal;
+    text-shadow: gainsboro;
+    font-family: sans-serif;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px; 
+}
+.formBody{
+    padding:15px;
+    margin:0px;
+    border:0px solid black;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px; 
+    border-bottom:2px solid green;
+    height:85%;
+    display: flex;
+    flex-direction:column;
+}
+.formBody label
+{ 
+    font-weight:600;
+    margin-top:1rem;
+    padding-left:10px;
+}
+.formBody input{
+    outline:2px solid #949794;
+    border-radius:25px;
+    padding:10px;
+    background-color: transparent;
+    color:black;
+    font-size:14px;
+    border:none;
+    margin-top:.3rem;
+}
+.formBody small{
+    margin-bottom:1rem;
+    font-weight: 400;
+}
+.formBody button{
+    width:50%;
+    margin-left:25%;
+    margin-bottom:1rem;
+    outline:none;
+    border:none;
+    color:white;
+    padding:7px;
+    border-radius:25px;
+    font-weight:600;
+    background: linear-gradient(to right, #00c9ff, #92fe9d);
+}
+.formBody p{
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom:1rem;
+}    */
