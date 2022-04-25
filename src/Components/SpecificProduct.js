@@ -44,15 +44,15 @@ export default function SpecificProduct() {
       getSimilarProducts(id);
     }, [])
     return (
-        <div className='conatiner-fluid' style={{border:'2px solid red',padding:'0px',margin:'0px'}}>
+        <div className='conatiner-fluid m-0 p-0'>
            
-           <div className='row' style={{border:'2px solid blue',padding:'0px',margin:'0px'}}>
-             <div className='col-2' style={{border:'2px solid green',padding:'2px',margin:'0px'}}>
-                 <div className='card'style={{border:'1px solid red',height:'100%',boxShadow:'0px 5px 5px 0px rgba(0,0,0,0.77)'}}>
+           <div className='row mx-3 m-0 p-0'>
+             <div className='col-2' style={{padding:'5px',margin:'0px'}}>
+                 <div className='card shadow'style={{height:'100%'}}>
                  <img className="card-img-top" src="/FruitsCat.png" style={{height:'100%'}} ></img>
                  </div>
              </div>
-             <div className='col-10' style={{padding:'10px 0px 0px 10px',margin:'0px',border:'2px solid purple',display:'flex',flexDirection:'column'}}>
+             <div className='col-10 m-0 d-flex flex-column' style={{padding:'10px 0px 0px 10px'}}>
                  <h1>Product Detail</h1>
                  <h5>Product Name : {productId}</h5>
                  <h5>Catagorey :{productId}</h5>
@@ -89,9 +89,14 @@ export default function SpecificProduct() {
            </div>
             {/* <h1>This is Specific Product View and the Product Id is {productId}</h1> */}
             {/* For relevant product */}
-            <div className='row' style={{border:'2px solid green',padding:'0px',margin:'0px'}}>
+            <div className='row' style={{padding:'0px',margin:'0px'}}>
+              <div className='col-12 m-0 p-0'>
+                 <h3 className='mx-3 mt-3'>
+                   Relevant Products
+                 </h3>
+              </div>
              <div className='col-12'>
-             <Swiper style={{border:'0px solid black'}}
+             <Swiper 
                      spaceBetween={5}
                     //  pagination={{ clickable: true }}
                      navigation={{ clickable: true }}
@@ -99,25 +104,24 @@ export default function SpecificProduct() {
                      onSlideChange={() => console.log('slide change')}
                      onSwiper={(swiper) => console.log(swiper)}
                    >
-                   <SwiperSlide style={{border:'0px solid red',paddingBottom:'5px'}}>
+                   <SwiperSlide style={{paddingBottom:'5px'}}>
 
-                       <div className='container-fluid' style={{border:'0px solid blue',padding:'0px',margin:'0px'}}>
-                       <div className='row'style={{border:'0px solid green',padding:'2px',margin:'0px'}}>
-                       <div className='col-12'style={{border:'0px solid red',padding:'0px',margin:'0px'}}>
-                                <div className="card" style={{}}>
-                                 <img onClick={()=>{displayProduct(1)}} className="card-img-top" src="/AppleAi.png"style={{height:'100%',borderRadius:'0px',cursor:'pointer'}}></img>
-                                 </div>
-                     
+                       <div className='container-fluid m-0 p-0'>
+                       <div className='row m-0'style={{padding:'2px'}}>
+                       <div className='col-12 m-0 p-0'>
+                          <div className="card" style={{}}>
+                           <img onClick={()=>{displayProduct(1)}} className="card-img-top" src="/AppleAi.png"style={{height:'100%',borderRadius:'0px',cursor:'pointer'}}></img>
+                          </div>
                        </div>
                        </div>    
                        </div>         
                    </SwiperSlide>
-                   <SwiperSlide style={{border:'0px solid red',paddingBottom:'5px'}}>
+                   <SwiperSlide style={{paddingBottom:'5px'}}>
 
-                       <div className='container-fluid' style={{border:'0px solid blue',padding:'0px',margin:'0px'}}>
-                       <div className='row'style={{border:'0px solid green',padding:'2px',margin:'0px'}}>
-                       <div className='col-12'style={{border:'0px solid red',padding:'0px',margin:'0px'}}>
-                                <div className="card" style={{}}>
+                       <div className='container-fluid m-0 p-0'>
+                       <div className='row m-0'style={{padding:'2px'}}>
+                       <div className='col-12 m-0 p-0'>
+                                <div className="card">
                                  <img className="card-img-top" src="/BananaAI.png"></img>
                                  </div>
                      
@@ -125,12 +129,12 @@ export default function SpecificProduct() {
                        </div>    
                        </div>         
                    </SwiperSlide>
-                   <SwiperSlide style={{border:'0px solid red',paddingBottom:'5px'}}>
+                   <SwiperSlide style={{paddingBottom:'5px'}}>
 
-                             <div className='container-fluid' style={{border:'0px solid blue',padding:'0px',margin:'0px'}}>
-                             <div className='row'style={{border:'0px solid green',padding:'2px',margin:'0px'}}>
-                             <div className='col-12'style={{border:'0px solid red',padding:'0px',margin:'0px'}}>
-                                      <div className="card" style={{}}>
+                             <div className='container-fluid m-0 p-0'>
+                             <div className='row m-0'style={{padding:'2px',}}>
+                             <div className='col-12'>
+                                      <div className="card">
                                        <img className="card-img-top" src="/MangiAi.png"></img>
                                       
                                        </div>
@@ -139,42 +143,37 @@ export default function SpecificProduct() {
                              </div>    
                              </div>         
                     </SwiperSlide>
-                    <SwiperSlide style={{border:'0px solid red',paddingBottom:'5px'}}>
-
-                         <div className='container-fluid' style={{border:'0px solid blue',padding:'0px',margin:'0px'}}>
-                         <div className='row'style={{border:'0px solid green',padding:'2px',margin:'0px'}}>
-                         <div className='col-12'style={{border:'0px solid red',padding:'0px',margin:'0px'}}>
-                                  <div className="card" style={{}}>
+                    <SwiperSlide style={{paddingBottom:'5px'}}>
+                         <div className='container-fluid m-0 p-0'>
+                         <div className='row'style={{padding:'2px'}}>
+                         <div className='col-12 m-0 p-0'>
+                                  <div className="card">
                                    <img className="card-img-top" src="/OrangeAi.png"></img>
-                                   
-                                   </div>
+                                  </div>
                          
-                         </div>
-                         </div>    
-                         </div>         
-                         </SwiperSlide>
-                         <SwiperSlide style={{border:'0px solid red',paddingBottom:'5px'}}>
-
-                             <div className='container-fluid' style={{border:'0px solid blue',padding:'0px',margin:'0px'}}>
-                             <div className='row'style={{border:'0px solid green',padding:'2px',margin:'0px'}}>
-                             <div className='col-12'style={{border:'0px solid red',padding:'0px',margin:'0px'}}>
-                                      <div className="card" style={{}}>
-                                       <img className="card-img-top" src="/StawbararyAi.png"></img>
-                                       </div>
-                             
-                             </div>
+                                </div>
                              </div>    
+                           </div>         
+                          </SwiperSlide>
+                         <SwiperSlide style={{border:'0px solid red',paddingBottom:'5px'}}>
+                             <div className='container-fluid m-0 p-0'>
+                             <div className='row m-0'style={{padding:'2px'}}>
+                             <div className='col-12 m-0 p-0'>
+                                <div className="card" style={{}}>
+                                  <img className="card-img-top" src="/StawbararyAi.png"></img>
+                                </div>
+                               </div>
+                              </div>    
                              </div>         
                           </SwiperSlide>
                           <SwiperSlide style={{border:'0px solid red',paddingBottom:'5px'}}>
 
-                               <div className='container-fluid' style={{border:'0px solid blue',padding:'0px',margin:'0px'}}>
-                               <div className='row'style={{border:'0px solid green',padding:'2px',margin:'0px'}}>
-                               <div className='col-12'style={{border:'0px solid red',padding:'0px',margin:'0px'}}>
-                                        <div className="card" style={{cursor:'pointer'}}>
-                                         <img className="card-img-top" src="/WaterMelonAi.png" style={{border:'0px solid black',margin:'0px',padding:'0px'}}></img>
-                                        
-                                         </div>
+                               <div className='container-fluid m-0 p-0'>
+                               <div className='row m-0'style={{padding:'2px'}}>
+                               <div className='col-12 m-0 p-0'>
+                                  <div className="card" style={{cursor:'pointer'}}>
+                                    <img className="card-img-top m-0 p-0" src="/WaterMelonAi.png"></img>
+                                  </div>
                                
                                </div>
                                </div>    

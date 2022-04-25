@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import ShoppingCartBill from './ShoppingCartBill'
 import './ShoppingCart.css'
 const ShoppingCartSidebar=()=> {
     // const numberCount=[];
     const [numberCount,setNumberCount] =useState([]);
     const [grandTotall,setgrandTotall] = useState(0);
+    const [refresh ,setrefresh]=useState(false)
+    const [removeIt,setRemoveIt] =useState({removeStatus:false,removeItemId:-1});
     useEffect(()=>{
         const cartItemsArray = [
           {
@@ -38,6 +41,7 @@ const ShoppingCartSidebar=()=> {
             totalIndividualPrice:0   
           }
         ];
+        // alert('i am called after the change in dependency array');
         setNumberCount(cartItemsArray);
     },[]);
     const ChangeSpecific=(type,n,index)=>{
@@ -83,17 +87,27 @@ const ShoppingCartSidebar=()=> {
                 break;
         }
     } 
+    const removeCurrentOne=(id)=>{
+       console.log(id);
+       let index = numberCount.indexOf(id);
+       numberCount.splice(index,1);
+       console.log(index);
+       console.log(numberCount);
+       //setNumberCount(numberCount);
+      //  setRemoveIt(true);
+       if(refresh)
+       setrefresh(false)
+       else
+       setrefresh(true)
+
+
+    }
    function calculateGrandTotall(params) {
      let totallAmount=0;
     for (let index = 0; index < params.length; index++) {
-      // console.log(params[index].totalIndividualPrice);
-         totallAmount = totallAmount+params[index].totalIndividualPrice;
-      
+         totallAmount = totallAmount+params[index].totalIndividualPrice;  
     }
-    // console.log('============')
-    // console.log(totallAmount);
-   setgrandTotall(totallAmount)
-    //  alert('I am child and data recieve from the parents are '+params)
+    setgrandTotall(totallAmount)
    }
    function calculateGrandTotall2(params) {
     let totallAmount=0;
@@ -103,10 +117,7 @@ const ShoppingCartSidebar=()=> {
      totallAmount = (totallAmount+(params[index].count*params[index].unitPrice));
    }
    console.log('Amount after reducing the quantity'+totallAmount)
-  //  console.log('============')
-  //  console.log(totallAmount);
-     setgrandTotall(totallAmount)
-   //  alert('I am child and data recieve from the parents are '+params)
+     setgrandTotall(totallAmount) 
   }
   return (
     <div className='row m-0 p-0'> 
@@ -114,11 +125,14 @@ const ShoppingCartSidebar=()=> {
     <div className='container-fluid m-0 p-0'>
       <div className='row m-0 p-0'>
         <div className='container-fluid m-0 p-0'>
-          {/* {
+          {
+            numberCount.length!==0?
             numberCount.map((item,index)=><>
+
              <div className='row mb-2 m-0 p-0 shadow d-flex justify-content-space-around'>          
-             <div className='col-3 m-0 p-0' style={{dispaly:'flex',flexDirection:'column'}}>
+             <div className='col-3 m-0 p-0 d-flex flex-column justify-content-center' style={{flexDirection:'row'}}>
                 <img className='img-fluid m-0 p-0' src='/WaterMelonAi.png'alt=''></img>
+                <button className='btn btn-danger mx-2 mb-3' onClick={()=>{removeCurrentOne(item)}}>Remove {item.id}</button>
              </div>
              <div className='col-2 m-0 p-0 d-flex justify-content-center align-items-center'>
                 {
@@ -152,8 +166,13 @@ const ShoppingCartSidebar=()=> {
                 </div>   
              </div>
             </div>
-            </>)
-          } */}
+            </>):
+            <div className='container-fluid m-0 p-0'style={{height:'100vh'}}>
+              <div className='row m-0 p-0 d-flex justify-content-center align-items-center'style={{height:'100%'}}>
+                  <Link to={'/'} className='btn btn-success p-3 w-25 ' >Go to Shop</Link>
+              </div>
+            </div>
+          }
           
            
         </div>
@@ -163,10 +182,53 @@ const ShoppingCartSidebar=()=> {
   </div>
    {/* For Children */}
    <div className='col-12 col-md-4 col-lg-3 m-0 p-0'>
-      <ShoppingCartBill 
+   <div className='container-fluid m-0 p-0'>
+      <div className='row m-0 py-3 px-2 p-0'>
+        <div className='row m-0 p-0 shadow'>
+          <div className='col-12 m-0 p-0 d-flex justify-content-center align-items-center'>
+           <h3>Bill Summary</h3>
+          </div>
+          <div className='col-12 m-0 p-0'>
+           <table class="table table-borderless  m-0 p-0">
+              <thead>
+                <tr>
+                  <th className='text-center'>Name</th>
+                  <th className='text-center'>Units</th>
+                  <th className='text-center'>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                {
+                   numberCount.map((item,index)=> 
+                   <tr key={index}>
+                     <td className='text-center'>{item.id}</td>
+                     <td className='text-center'>{item.count}</td>
+                     <td className='text-center'>{item.totalIndividualPrice}</td>
+                   </tr> 
+                   )
+               }
+                <tr>
+                  <td className='p-0' colSpan={3}>
+                   <p className='py-2 fw-bold mb-1 m-0 text-center'> Totall Ammount : 
+                   <span> {grandTotall}</span>
+                   </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className='col-12 m-0 p-0 d-flex justify-content-center'>
+            <Link to='/PaymentProcess' className='m-0 w-100 btn btn-success'>
+               Pay now
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+      {/* <ShoppingCartBill 
         grandTotallValue={grandTotall}
         dataShare={numberCount}
-      ></ShoppingCartBill>
+      ></ShoppingCartBill> */}
    </div>
  </div>
   )

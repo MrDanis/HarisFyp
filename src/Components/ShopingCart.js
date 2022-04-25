@@ -4,13 +4,9 @@ import ShoppingCartSidebar from './ShoppingCartSidebar'
 import './ShoppingCart.css'
 const ShopingCart=()=> {
   return (
-    <div className='container-fluid m-0 p-0 border border-2 border-success'>
-      
-       {/* <ShoppingCartSidebar>
-       
-       </ShoppingCartSidebar>  */}
-       
-      
+    <div className='container-fluid m-0 p-0'>
+       <ShoppingCartSidebar>
+       </ShoppingCartSidebar> 
     </div>
   )
 }
